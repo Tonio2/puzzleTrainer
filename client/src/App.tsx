@@ -5,6 +5,8 @@ import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
 import LoadingSpinner from "./components/LoadingSpinner"; // Assuming you have a loading spinner component
 import { ToastContainer } from "react-toastify";
+import PuzzleForm from "pages/PuzzleForm";
+import Catalogue from "pages/Catalogue";
 
 // Lazy-loaded components
 const Home = React.lazy(() => import("./pages/Home"));
@@ -13,7 +15,7 @@ const Register = React.lazy(() => import("./pages/Register"));
 const VerifyEmail = React.lazy(() => import("./pages/VerifyEmail"));
 const ForgotPassword = React.lazy(() => import("./pages/ForgotPassword"));
 const ResetPassword = React.lazy(() => import("./pages/ResetPassword"));
-const Dashboard = React.lazy(() => import("./pages/Dashboard"));
+const Library = React.lazy(() => import("./pages/Library"));
 const Profile = React.lazy(() => import("./pages/Profile"));
 const NotFound = React.lazy(() => import("./pages/NotFound"));
 
@@ -30,10 +32,18 @@ const App = () => (
                     <Route path="/forgot-password" element={<ForgotPassword />} />
                     <Route path="/reset-password/:token" element={<ResetPassword />} />
                     <Route
-                        path="/dashboard"
+                        path="/catalogue"
                         element={
                             <ProtectedRoute>
-                                <Dashboard />
+                                <Catalogue />
+                            </ProtectedRoute>
+                        }
+                    />
+                    <Route
+                        path="/library"
+                        element={
+                            <ProtectedRoute>
+                                <Library />
                             </ProtectedRoute>
                         }
                     />
@@ -42,6 +52,22 @@ const App = () => (
                         element={
                             <ProtectedRoute>
                                 <Profile />
+                            </ProtectedRoute>
+                        }
+                    />
+                    <Route
+                        path="/puzzleForm"
+                        element={
+                            <ProtectedRoute>
+                                <PuzzleForm />
+                            </ProtectedRoute>
+                        }
+                    />
+                    <Route
+                        path="/puzzleForm/:puzzle_id"
+                        element={
+                            <ProtectedRoute>
+                                <PuzzleForm />
                             </ProtectedRoute>
                         }
                     />

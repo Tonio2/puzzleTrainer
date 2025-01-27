@@ -6,8 +6,6 @@ import PuzzleReview from '../models/PuzzleReview';
 import Joi from 'joi';
 import { AuthenticatedRequest } from '../types';
 
-
-
 // Create Puzzle
 export const createPuzzle = asyncHandler(async (req: AuthenticatedRequest, res: Response) => {
     const createPuzzleSchema = Joi.object({

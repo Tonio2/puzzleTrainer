@@ -24,7 +24,9 @@ const Navbar = () => {
             <div>
                 {user ? (
                     <>
-                        <Link to="/dashboard" className="mr-4">Dashboard</Link>
+                        <Link to="/catalogue" className="mr-4">Catalogue</Link>
+                        <Link to="/library" className="mr-4">Library</Link>
+                        <Link to="/puzzleForm" className="mr-4">Create Puzzle</Link>
                         <Link to="/profile" className="mr-4">Profile</Link>
                         <button onClick={handleLogout} className="bg-red-500 px-4 py-2 rounded">Logout</button>
                     </>
