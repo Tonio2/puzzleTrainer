@@ -1,0 +1,16 @@
+# Server
+server/dist/
+server/node_modules/
+server/.env
+server/error.log
+
+# Client
+client/node_modules/
+client/.env
+
+# Personal
+TODO
+
+# Testing
+venv/
+__pycache__/
