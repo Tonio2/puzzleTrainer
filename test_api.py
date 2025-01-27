@@ -1,4 +1,3 @@
-import pytest
 import requests
 
 BASE_URL = "http://localhost:5000/api/v1/puzzles"  # Replace with your actual base URL
